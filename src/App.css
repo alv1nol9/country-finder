@@ -1,1 +1,104 @@
-
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333333; /* Dark gray text for readability */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .App {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #4a90e2; /* Soft blue for the header */
+    margin-bottom: 30px;
+  }
+  
+  .search-bar {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #4a90e2; /* Soft blue border */
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for the search bar */
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .input {
+    padding: 12px;
+    font-size: 1.1em;
+    width: 250px;
+    margin-right: 10px;
+    border: 2px solid #4a90e2; /* Soft blue border */
+    border-radius: 5px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .search-btn {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    background-color: #f78c42; /* Coral for the search button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-btn:hover {
+    background-color: #d97b3f; /* Darker coral for hover */
+  }
+  
+  .country-display {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #4a90e2; /* Soft blue border around each country */
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for country cards */
+    width: 300px;
+    text-align: left;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a soft lift effect */
+  }
+  
+  .country-display h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #4a90e2; /* Soft blue for the country name */
+  }
+  
+  .country-display p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  
+  .country-display img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    border: 2px solid #4a90e2; /* Soft blue border around the flag */
+    border-radius: 5px;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .country-display {
+      width: 80%;
+    }
+  
+    .input {
+      width: 180px;
+    }
+  }
+  

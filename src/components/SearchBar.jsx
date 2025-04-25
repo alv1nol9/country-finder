@@ -1,27 +1,28 @@
-import React, { useState } from "react";
+// src/components/SearchBar.jsx
+import React, { useState } from 'react';
 
-export default function SearchBar({ onSearch }) {
-  const [input, setInput] = useState("")
+const SearchBar = ({ onSearch }) => {
+  const [countryName, setCountryName] = useState('');
 
-  const handleClick = () => {
-    onSearch(input.trim());
+  const handleSearch = () => {
+    onSearch(countryName);
+    setCountryName('');
   };
 
   return (
-    <div className="mb-4">
+    <div className="search-bar">
       <input
         type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
+        value={countryName}
+        onChange={(e) => setCountryName(e.target.value)}
         placeholder="Enter country name"
-        className="border p-2 w-full rounded mb-2"
+        className="input"
       />
-      <button
-        onClick={handleClick}
-        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded w-full"
-      >
+      <button onClick={handleSearch} className="search-btn">
         Search
       </button>
     </div>
   );
-}
+};
+
+export default SearchBar;

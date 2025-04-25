@@ -1,20 +1,20 @@
-import React from "react";
+// src/components/CountryDisplay.jsx
+import React from 'react';
 
-export default function CountryDisplay({ country }) {
-  if (!country) return null;
+const CountryDisplay = ({ country }) => {
+  if (!country) return <p>No country selected.</p>; // No country found case
 
   return (
-    <div className="mt-4 border p-4 rounded shadow">
-      <h2 className="text-xl font-semibold mb-2">{country.name.common}</h2>
-      <img
-        src={country.flags.png}
-        alt={`Flag of ${country.name.common}`}
-        className="w-32 h-auto mb-2"
-      />
-      <p><strong>Capital:</strong> {country.capital ? country.capital[0] : "N/A"}</p>
-      <p><strong>Region:</strong> {country.region || "N/A"}</p>
-      <p><strong>Subregion:</strong> {country.subregion || "N/A"}</p>
-      <p><strong>Borders:</strong> {country.borders ? country.borders.join(", ") : "None"}</p>
+    <div className="country-display">
+      <h1>{country.name.common}</h1>
+      <img src={country.flags.png} alt={`Flag of ${country.name.common}`} />
+      <p><strong>Official Name:</strong> {country.name.official}</p>
+      <p><strong>Region:</strong> {country.region}</p>
+      <p><strong>Capital:</strong> {country.capital ? country.capital[0] : 'N/A'}</p>
+      <p><strong>Population:</strong> {country.population}</p>
+      <p><strong>Area:</strong> {country.area} km²</p>
     </div>
   );
-}
+};
+
+export default CountryDisplay;
