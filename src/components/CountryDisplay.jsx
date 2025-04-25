@@ -1,4 +1,4 @@
-// src/components/CountryDisplay.jsx
+
 import React from 'react';
 
 const CountryDisplay = ({ country }) => {
@@ -18,3 +18,4 @@ const CountryDisplay = ({ country }) => {
 };
 
 export default CountryDisplay;
+

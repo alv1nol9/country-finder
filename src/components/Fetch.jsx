@@ -1,9 +1,10 @@
-// src/components/CountryFetcher.jsx
+
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import CountryDisplay from './CountryDisplay';
 
 const CountryFetcher = () => {
+
   const [countryData, setCountryData] = useState(null);
   const apiUrl = 'https://restcountries.com/v3.1/all';
 
